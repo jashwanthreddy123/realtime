@@ -25,7 +25,7 @@ spec:
       - name: realtime-con
  
         image: jashwanth0310/realtime:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
  
         ports:
         - containerPort: 80
