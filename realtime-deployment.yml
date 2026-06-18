@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+ 
+metadata:
+  name: realtime
+  namespace: realtime
+ 
+  labels:
+    app: realtime
+ 
+spec:
+  replicas: 2
+ 
+  selector:
+    matchLabels:
+      app: realtime
+ 
+  template:
+    metadata:
+      labels:
+        app: realtime
+ 
+    spec:
+      containers:
+      - name: realtime-con
+ 
+        image: jashwanth0310/realtime:latest
+        imagePullPolicy: IfNotPresent
+ 
+        ports:
+        - containerPort: 80
